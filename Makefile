@@ -2,7 +2,8 @@ test: node_modules
 	@node_modules/.bin/mocha \
 		--compilers js:mocha-traceur \
 		--reporter spec \
-		--require should
+		--require should \
+		test/test.define.js
 
 node_modules: package.json
 	@npm install -qs
