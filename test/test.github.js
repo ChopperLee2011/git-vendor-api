@@ -1,13 +1,13 @@
-import test from 'tape';
-import Github from'../lib/GitHub';
-import test_user from './user.json';
+const test = require('tape'),
+    gitVFactory = require('../lib/gitVFactory'),
+    config = require('./config');
 
 test("Github API", function (t) {
     var timeout = setTimeout(function () {
         t.fail();
     }, 100000);
-    var github = new Github(
-        test_user.GITHUB_TOKEN
+    var github = gitVFactory.create('github',
+        config.github
     );
 
     t.test('get user', function (q) {

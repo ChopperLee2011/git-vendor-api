@@ -7,7 +7,7 @@ test("Github API", function (t) {
         t.fail();
     }, 100000);
     var gitlab = new Gitlab(
-        test_user.GITHUB_TOKEN
+        test_user.gitlab
     );
 
     t.test('get user', function (q) {
