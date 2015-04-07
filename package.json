@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "tape": "^4.0.0",
+    "through2": "^0.6.3",
     "xmlhttprequest": "^1.7.0"
   },
   "devDependencies": {

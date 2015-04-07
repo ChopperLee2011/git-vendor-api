@@ -1,7 +1,7 @@
 const config = {
     github: {
-        "GITHUB_TOKEN": "0f91ec5c9b81f5195e2493f60dd889246a24e205",
-        "API_URL": "https://github.com/api/v3/"
+        "GITHUB_TOKEN": "cdf1105bfe5d9242b52f3dd5a91968201ea70be5",
+        "API_URL": "https://github.com/api/v3"
     },
     gitlab: {
         "GITLAB_TOKEN": "Meo2yZWYVWtqzdL6dVze",
@@ -9,6 +9,6 @@ const config = {
     },
     "FAKER_TOKEN": "1234567890"
 };
-exports = config;
+module.exports = config;
 
 

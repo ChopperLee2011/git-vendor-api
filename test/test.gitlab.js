@@ -1,14 +1,13 @@
-import test from 'tape';
-import Gitlab from '../lib/GitLab';
-import test_user from './user.json';
+const test = require('tape'),
+    gitVFactory = require('../lib/gitVFactory'),
+    config = require('./config');
 
 test("Github API", function (t) {
     var timeout = setTimeout(function () {
         t.fail();
     }, 100000);
-    var gitlab = new Gitlab(
-        test_user.gitlab
-    );
+    var gitlab = gitVFactory.create('gitlab', config.gitlab);
+
 
     t.test('get user', function (q) {
         gitlab.getUser().then(function (res) {
